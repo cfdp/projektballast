@@ -132,7 +132,7 @@
           }
           var $default_global_text_area_content = $page_builder_element_item_clicked.find('textarea.page-builder-element-global-text-area').val();
           $page_builder_modal.find('.page-builder-modal-content').val($default_global_text_area_content);
-          //_admin_page_builder_enable_rich_editor($default_global_text_area_content);
+          _admin_page_builder_enable_rich_editor($default_global_text_area_content);
 
         }
 
@@ -161,7 +161,7 @@
                 $page_builder_element_item_clicked.find('input.page-builder-element-show-title').val(page_builder_show_title);
                 $page_builder_element_item_clicked.find('input.page-builder-element-title').val(block_title);
                 if (page_builder_element_type == 'global_text_area') {
-                  var $global_text_area_html = $this.find('textarea.page-builder-modal-content').val();//tinymce.activeEditor.getContent();
+                  var $global_text_area_html = tinymce.activeEditor.getContent();
 
                   $page_builder_element_item_clicked.find('textarea.page-builder-element-global-text-area').val($global_text_area_html);
                 }
@@ -310,14 +310,8 @@
        "searchreplace visualblocks code fullscreen",
        "insertdatetime media table contextmenu paste textcolor colorpicker"
        ],*/
-      valid_elements : "*",
-      extended_valid_elements: "*[*]",
-	  apply_source_formatting : false,
-      cleanup : false,
-	  verify_html : false,
- 	  cleanup_on_startup : false,
-	  forced_root_block : "" ,
-	  force_p_newlines : false,
+      //valid_elements : "*",
+      extended_valid_elements: "i[class|id]",
       file_browser_callback: function (field_name, url, type, win) {
         // win.document.getElementById(field_name).value = 'my browser value';
         var imce_url = Drupal.settings.page_builder_editor.imce_url;
