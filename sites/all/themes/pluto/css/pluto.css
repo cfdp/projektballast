@@ -1060,9 +1060,15 @@ body.in-maintenance {
     left: auto;
   }
 }
-@media only screen and (max-width: 1024px) {
+/* bugfix - this was originally only for below 1024 */
+.page-builder-row-section.page-builder-row-parallax{
+    background-attachment: scroll !important;
+    background-position: center top !important;
+}
+/*@media only screen and (max-width: 1024px) {
      .page-builder-row-section.page-builder-row-parallax{
          background-attachment: scroll !important;
          background-position: center top !important;
     }
 }
+*/
