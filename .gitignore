@@ -4,3 +4,8 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# dev
+sites/all/modules/stage_file_proxy
+sites/all/modules/reroute_email
+sites/all/modules/devel

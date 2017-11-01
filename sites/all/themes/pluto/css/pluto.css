@@ -1072,3 +1072,16 @@ body.in-maintenance {
     }
 }
 */
+
+.webform-client-form .panel .panel-body {
+  padding: 0;
+}
+
+.webform-client-form .captcha.panel {
+  box-shadow: none;
+}
+
+.form-item-captcha-response label.error {
+  color: red;
+  text-transform: none;
+}
