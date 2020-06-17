@@ -56,9 +56,8 @@ features[field_validation_rule][] = cv_specific_value
 features[field_validation_rule][] = cv_url
 features[node][] = cv_test_field_validation
 
-; Information added by Drupal.org packaging script on 2014-07-30
-version = "7.x-1.41"
+; Information added by Drupal.org packaging script on 2019-10-18
+version = "7.x-1.47"
 core = "7.x"
 project = "clientside_validation"
-datestamp = "1406709228"
-
+datestamp = "1571394488"

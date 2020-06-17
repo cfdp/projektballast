@@ -1,7 +1,7 @@
 <?php
 
 /**
- * implementation of views_data()
+ * Implements hook_views_data().
  */
 function tweet_feed_views_data() {
   return array(
@@ -16,7 +16,7 @@ function tweet_feed_views_data() {
       ),
       'tweet_id' => array(
         'title' => t('Tweet ID'),
-        'help' => t('The Twitter Tweet ID of the tweet'),
+        'help' => t('The Twitter Tweet ID of the tweet.'),
         'field' => array(
           'handler' => 'views_handler_field_numeric',
           'click sortable' => TRUE,
@@ -51,7 +51,21 @@ function tweet_feed_views_data() {
       ),
       'user_id' => array(
         'title' => t('User ID'),
-        'help' => t('The user_id of the person making the tweet'),
+        'help' => t('The user_id of the person making the tweet.'),
+        'field' => array(
+          'handler' => 'views_handler_field_numeric',
+          'click sortable' => TRUE,
+        ),
+        'filter' => array(
+          'handler' => 'views_handler_filter_numeric',
+        ),
+        'sort' => array(
+          'handler' => 'views_handler_sort',
+        ),
+      ),
+      'is_reply' => array(
+        'title' => t('Is Reply'),
+        'help' => t('Is this tweet a reply to another tweet?'),
         'field' => array(
           'handler' => 'views_handler_field_numeric',
           'click sortable' => TRUE,
@@ -77,9 +91,30 @@ function tweet_feed_views_data() {
           'handler' => 'views_handler_field',
         ),
       ),
+      'media_url' => array(
+        'title' => t('Media Image URL'),
+        'help' => t('The url to the media image for a tweet.'),
+        'field' => array(
+          'handler' => 'views_handler_field',
+        ),
+      ),
+      'media_url_https' => array(
+        'title' => t('Media Image Secure URL'),
+        'help' => t('The url to the media image for a tweet (secure url).'),
+        'field' => array(
+          'handler' => 'views_handler_field',
+        ),
+      ),
       'screen_name' => array(
         'title' => t('Screen Name'),
         'help' => t('The screen name of the tweeter.'),
+        'field' => array(
+          'handler' => 'views_handler_field',
+        ),
+      ),
+      'name' => array(
+        'title' => t('Name'),
+        'help' => t('The full name of the tweeter.'),
         'field' => array(
           'handler' => 'views_handler_field',
         ),
@@ -97,14 +132,12 @@ function tweet_feed_views_data() {
           'handler' => 'views_handler_filter_hashtag_string',
         ),
       ),
-
     ),
   );
 }
 
 
 class views_handler_filter_hashtag_string extends views_handler_filter_string {
-
   function op_contains($field) {
     $this->query->add_where($this->options['group'], $field, array($this->value), 'IN');
   }
@@ -155,7 +188,7 @@ class views_handler_argument_hashtag extends views_handler_argument_string {
 		$form['match_exact'] = array(
 			'#type' => 'checkbox',
 			'#title' => t('Exact Match Mode'),
-			'#description' => t('Match the argument exactly. Not as a potential substring'),
+			'#description' => t('Match the argument exactly. Not as a potential substring.'),
 			'#default_value' => $this->options['match_exact'],
 			'#fieldset' => 'more',
 		);

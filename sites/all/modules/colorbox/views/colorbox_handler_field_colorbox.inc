@@ -67,7 +67,7 @@ If you would like to have the characters %5B and %5D please use the html entity 
           $patterns .= theme('item_list',
             array(
               'items' => $items,
-              'type' => $type
+              'type' => $type,
             ));
         }
       }
@@ -162,10 +162,15 @@ If you would like to have the characters %5B and %5D please use the html entity 
     $tokens = $this->get_render_tokens($this->options['alter']);
     $popup = filter_xss_admin($this->options['popup']);
     $caption = filter_xss_admin($this->options['caption']);
-    $gallery = drupal_html_class($this->options['custom_gid']);
+    $gallery = filter_xss_admin($this->options['custom_gid']);
     $popup = strtr($popup, $tokens);
     $caption = strtr($caption, $tokens);
-    $gallery = strtr($gallery, $tokens);
+    $gallery = drupal_html_class(strtr($gallery, $tokens));
+
+    // Return nothing if popup is empty.
+    if (empty($popup)) {
+      return;
+    }
 
     $width = $this->options['width'] ? $this->options['width'] : '';
     $height = $this->options['height'] ? $this->options['height'] : '';
@@ -178,11 +183,11 @@ If you would like to have the characters %5B and %5D please use the html entity 
         'width' => $width,
         'height' => $height,
         'title' => $caption,
-        'inline' => 'true'
+        'inline' => 'true',
       ),
       'attributes' => array(
         'class' => array('colorbox-inline'),
-        'rel' => $gallery_id
+        'rel' => $gallery_id,
       )
     );
     // Remove any parameters that aren't set.

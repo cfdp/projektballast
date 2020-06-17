@@ -24,8 +24,15 @@
         return required !== 0;
       }
       $(document).bind('state:required', function(e) {
-        if (e.trigger) {
-          $(e.target).valid();
+        if (!e.trigger) {
+          return;
+        }
+        var $target = $(e.target).not(':hidden');
+        if (!$target.is('input') && !$target.is('select') && !$target.is('textarea')) {
+          $target = $target.find('input,select,textarea').not(':hidden');
+        }
+        if ($target.length) {
+          $target.valid();
         }
       });
       $(document).bind('clientsideValidationInitialized', function(){

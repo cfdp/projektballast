@@ -1,10 +1,10 @@
 # Danish translation of Simplenews (7.x-1.1)
-# Copyright (c) 2015 by the Danish translation team
+# Copyright (c) 2018 by the Danish translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Simplenews (7.x-1.1)\n"
-"POT-Creation-Date: 2015-11-15 11:24+0000\n"
+"POT-Creation-Date: 2018-11-06 20:23+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -705,6 +705,8 @@ msgid "Newsletter category"
 msgstr "Nyhedsbrevskategori"
 msgid "Manage <a href=\"!url\">subscriptions</a>"
 msgstr "Håndtér <a href=\"!url\">abonnementer</a>"
+msgid "Simplenews newsletter"
+msgstr "Simplenews nyhedsbrev"
 msgid "Simplenews newsletter category"
 msgstr "Simplenews nydhedsbrevskategori"
 msgid "Subscriber email"

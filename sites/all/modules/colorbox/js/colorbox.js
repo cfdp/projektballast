@@ -1,8 +1,13 @@
+/**
+ * @file
+ * Colorbox module init js.
+ */
+
 (function ($) {
 
 Drupal.behaviors.initColorbox = {
   attach: function (context, settings) {
-    if (!$.isFunction($.colorbox)) {
+    if (!$.isFunction($.colorbox) || typeof settings.colorbox === 'undefined') {
       return;
     }
 
@@ -13,6 +18,16 @@ Drupal.behaviors.initColorbox = {
         return;
       }
     }
+
+    // Use "data-colorbox-gallery" if set otherwise use "rel".
+    settings.colorbox.rel = function () {
+      if ($(this).data('colorbox-gallery')) {
+        return $(this).data('colorbox-gallery');
+      }
+      else {
+        return $(this).attr('rel');
+      }
+    };
 
     $('.colorbox', context)
       .once('init-colorbox')

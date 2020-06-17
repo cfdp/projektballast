@@ -1,10 +1,10 @@
 # Danish translation of Chaos tool suite (ctools) (7.x-1.5)
-# Copyright (c) 2016 by the Danish translation team
+# Copyright (c) 2018 by the Danish translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Chaos tool suite (ctools) (7.x-1.5)\n"
-"POT-Creation-Date: 2016-08-05 22:09+0000\n"
+"POT-Creation-Date: 2018-11-06 19:35+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -3995,3 +3995,15 @@ msgid "Returns true if the nodes status is \"published\"."
 msgstr "Returnerer sand hvis nodens status er \"udgivet\""
 msgid "Add the action links (local tasks) as content."
 msgstr "Tilføj action-links (local tasks) som indhold."
+msgid "Node being commented on"
+msgstr "Indholdselement der bliver kommenteret på"
+msgid "Comment being replied to"
+msgstr "Kommentar der svares på"
+msgid "@identifier vocabulary is \"@machine_names\""
+msgid_plural "@identifier vocabulary is one of \"@machine_names\""
+msgstr[0] "@identifier ordforråd er \"@machine_names\""
+msgstr[1] "@identifier ordforråd er et af \"@machine_names\""
+msgid "Edit custom content pane"
+msgstr "Redigér brugerdefineret content pane"
+msgid "Add the site's slogan as content."
+msgstr "Tilføj hjemmesidens slogan som indhold."

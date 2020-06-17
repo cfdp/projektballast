@@ -1,10 +1,10 @@
 # Danish translation of OAuth (7.x-3.2)
-# Copyright (c) 2014 by the Danish translation team
+# Copyright (c) 2018 by the Danish translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OAuth (7.x-3.2)\n"
-"POT-Creation-Date: 2014-01-24 18:31+0000\n"
+"POT-Creation-Date: 2018-11-06 19:07+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -50,6 +50,8 @@ msgid "Your changes have been saved."
 msgstr "Ændringer gemt."
 msgid "Warning"
 msgstr "Advarsel"
+msgid "Expires"
+msgstr "Udløber"
 msgid "Key"
 msgstr "Nøgle"
 msgid "Revert"

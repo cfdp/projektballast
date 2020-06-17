@@ -1,10 +1,10 @@
 # Danish translation of Localization update (7.x-2.2)
-# Copyright (c) 2017 by the Danish translation team
+# Copyright (c) 2018 by the Danish translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Localization update (7.x-2.2)\n"
-"POT-Creation-Date: 2017-09-18 07:45+0000\n"
+"POT-Creation-Date: 2018-11-06 18:43+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -235,8 +235,11 @@ msgid_plural ""
 "@count translation files could not be imported. <a href=\"@url\">See "
 "the log</a> for details."
 msgstr[0] ""
-"En oversættelsesfil kunne ikke importeres. <a href=\"@url\">Se the "
-"log</a> for details."
+"En oversættelsesfil kunne ikke importeres. <a href=\"@url\">Se "
+"loggen</a> for flere detaljer."
+msgstr[1] ""
+"@count oversættelsesfiler kunne ikke importeres. <a href=\"@url\">Se "
+"loggen</a> for flere detaljer."
 msgid ""
 "One translation file imported. %number translations were added, "
 "%update translations were updated and %delete translations were "

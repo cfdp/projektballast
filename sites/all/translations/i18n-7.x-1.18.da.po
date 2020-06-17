@@ -1,10 +1,10 @@
 # Danish translation of Internationalization (7.x-1.18)
-# Copyright (c) 2017 by the Danish translation team
+# Copyright (c) 2018 by the Danish translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Internationalization (7.x-1.18)\n"
-"POT-Creation-Date: 2017-06-17 13:44+0000\n"
+"POT-Creation-Date: 2018-11-29 17:34+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -166,6 +166,8 @@ msgid "Create @name"
 msgstr "Opret @name"
 msgid "Original text"
 msgstr "Oprindelig tekst"
+msgid "vocabulary"
+msgstr "ordforråd"
 msgid "original"
 msgstr "original"
 msgid "translate"

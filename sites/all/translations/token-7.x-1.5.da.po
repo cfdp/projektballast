@@ -1,10 +1,10 @@
 # Danish translation of Token (7.x-1.5)
-# Copyright (c) 2013 by the Danish translation team
+# Copyright (c) 2018 by the Danish translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Token (7.x-1.5)\n"
-"POT-Creation-Date: 2013-02-24 00:31+0000\n"
+"POT-Creation-Date: 2018-11-06 19:40+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "Forklaringen på den seneste ændring af indholdselementet."
 msgid "The title of the current page."
 msgstr "Titlen på den aktuelle side."
 msgid "The URL of the current page."
-msgstr "URLen på den nuværende side."
+msgstr "Denne sides URL."
 msgid "The page number of the current page when viewing paged lists."
 msgstr "Sidenummeret på den aktuelle side i sideinddelte lister."
 msgid ""
