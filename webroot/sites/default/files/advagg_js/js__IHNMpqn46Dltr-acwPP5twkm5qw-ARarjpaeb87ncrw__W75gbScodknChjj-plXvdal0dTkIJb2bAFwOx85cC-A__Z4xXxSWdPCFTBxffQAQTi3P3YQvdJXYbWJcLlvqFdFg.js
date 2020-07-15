@@ -1,0 +1,38 @@
+/* Source and licensing information for the line(s) below can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/js/parallax/jquery.parallax.js. */
+(function(n){var t=n(window),e=t.height();t.resize(function(){e=t.height()});n.fn.parallax=function(i,o,u){var r=n(this),f,h,s=0;r.each(function(){h=r.offset().top});if(u){f=function(n){return n.outerHeight(!0)}}
+else{f=function(n){return n.height()}};if(arguments.length<1||i===null)i='50%';if(arguments.length<2||o===null)o=0.1;if(arguments.length<3||u===null)u=!0;function l(){var u=t.scrollTop();r.each(function(){var t=n(this),l=t.offset().top,s=f(t);if(l+s<u||l>u+e){return};r.css('backgroundPosition',i+' '+Math.round((h-u)*o)+'px')})};t.bind('scroll',l).resize(l);l()}})(jQuery);;
+/* Source and licensing information for the above line(s) can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/js/parallax/jquery.parallax.js. */
+;/*})'"*/
+/* Source and licensing information for the line(s) below can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/js/parallax/jquery.scrollTo.js. */
+/**
+ * jQuery.ScrollTo - Easy element scrolling using jQuery.
+ * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Dual licensed under MIT and GPL.
+ * Date: 5/25/2009
+ * @author Ariel Flesler
+ * @version 1.4.2
+ *
+ * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+ */
+;(function(d){var k=d.scrollTo=function(a,i,e){d(window).scrollTo(a,i,e)};k.defaults={axis:'xy',duration:parseFloat(d.fn.jquery)>=1.3?0:1};k.window=function(a){return d(window)._scrollable()};d.fn._scrollable=function(){return this.map(function(){var a=this,i=!a.nodeName||d.inArray(a.nodeName.toLowerCase(),['iframe','#document','html','body'])!=-1;if(!i)return a;var e=(a.contentWindow||a).document||a.ownerDocument||a;return d.browser.safari||e.compatMode=='BackCompat'?e.body:e.documentElement})};d.fn.scrollTo=function(n,j,b){if(typeof j=='object'){b=j;j=0}if(typeof b=='function')b={onAfter:b};if(n=='max')n=9e9;b=d.extend({},k.defaults,b);j=j||b.speed||b.duration;b.queue=b.queue&&b.axis.length>1;if(b.queue)j/=2;b.offset=p(b.offset);b.over=p(b.over);return this._scrollable().each(function(){var q=this,r=d(q),f=n,s,g={},u=r.is('html,body');switch(typeof f){case'number':case'string':if(/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)){f=p(f);break}f=d(f,this);case'object':if(f.is||f.style)s=(f=d(f)).offset()}d.each(b.axis.split(''),function(a,i){var e=i=='x'?'Left':'Top',h=e.toLowerCase(),c='scroll'+e,l=q[c],m=k.max(q,i);if(s){g[c]=s[h]+(u?0:l-r.offset()[h]);if(b.margin){g[c]-=parseInt(f.css('margin'+e))||0;g[c]-=parseInt(f.css('border'+e+'Width'))||0}g[c]+=b.offset[h]||0;if(b.over[h])g[c]+=f[i=='x'?'width':'height']()*b.over[h]}else{var o=f[h];g[c]=o.slice&&o.slice(-1)=='%'?parseFloat(o)/100*m:o}if(/^\d+$/.test(g[c]))g[c]=g[c]<=0?0:Math.min(g[c],m);if(!a&&b.queue){if(l!=g[c])t(b.onAfterFirst);delete g[c]}});t(b.onAfter);function t(a){r.animate(g,j,b.easing,a&&function(){a.call(this,n,b)})}}).end()};k.max=function(a,i){var e=i=='x'?'Width':'Height',h='scroll'+e;if(!d(a).is('html,body'))return a[h]-d(a)[e.toLowerCase()]();var c='client'+e,l=a.ownerDocument.documentElement,m=a.ownerDocument.body;return Math.max(l[h],m[h])-Math.min(l[c],m[c])};function p(a){return typeof a=='object'?a:{top:a,left:a}}})(jQuery);
+;/*})'"*/
+;
+/* Source and licensing information for the above line(s) can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/js/parallax/jquery.scrollTo.js. */
+;/*})'"*/
+/* Source and licensing information for the line(s) below can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/lib/owl_carousel/page_builder_slider.js. */
+(function(e){Drupal.behaviors.page_builder_sliders={attach:function(r,a){e.each(a.page_builder.sliders,function(r,a){e('.'+r+' .page-builder-column-wrapper').owlCarousel(a)})}}})(jQuery);;
+/* Source and licensing information for the above line(s) can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/lib/owl_carousel/page_builder_slider.js. */
+;/*})'"*/
+/* Source and licensing information for the line(s) below can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/js/page_builder.js. */
+(function(a){Drupal.behaviors.page_builder={attach:function(e,i){a.each(i.page_builder.parallax,function(e,i){a('.'+e).parallax(i.position,parseFloat(i.speed))})}}})(jQuery);;
+/* Source and licensing information for the above line(s) can be found at https://projektballast.dk/sites/all/modules/tabvn/page_builder/js/page_builder.js. */
+;/*})'"*/
+/* Source and licensing information for the line(s) below can be found at https://projektballast.dk/sites/all/modules/google_analytics/googleanalytics.js. */
+(function(e){Drupal.googleanalytics={};e(document).ready(function(){e(document.body).bind("mousedown keyup touchstart",function(t){e(t.target).closest("a,area").each(function(){if(Drupal.googleanalytics.isInternal(this.href)){if(e(this).is(".colorbox")&&(Drupal.settings.googleanalytics.trackColorbox)){}
+else if(Drupal.settings.googleanalytics.trackDownload&&Drupal.googleanalytics.isDownload(this.href)){ga("send",{"hitType":"event","eventCategory":"Downloads","eventAction":Drupal.googleanalytics.getDownloadExtension(this.href).toUpperCase(),"eventLabel":Drupal.googleanalytics.getPageUrl(this.href),"transport":"beacon"})}
+else if(Drupal.googleanalytics.isInternalSpecial(this.href)){ga("send",{"hitType":"pageview","page":Drupal.googleanalytics.getPageUrl(this.href),"transport":"beacon"})}}
+else{if(Drupal.settings.googleanalytics.trackMailto&&e(this).is("a[href^='mailto:'],area[href^='mailto:']")){ga("send",{"hitType":"event","eventCategory":"Mails","eventAction":"Click","eventLabel":this.href.substring(7),"transport":"beacon"})}
+else if(Drupal.settings.googleanalytics.trackOutbound&&this.href.match(/^\w+:\/\//i)){if(Drupal.settings.googleanalytics.trackDomainMode!==2||(Drupal.settings.googleanalytics.trackDomainMode===2&&!Drupal.googleanalytics.isCrossDomain(this.hostname,Drupal.settings.googleanalytics.trackCrossDomains))){ga("send",{"hitType":"event","eventCategory":"Outbound links","eventAction":"Click","eventLabel":this.href,"transport":"beacon"})}}}})});if(Drupal.settings.googleanalytics.trackUrlFragments){window.onhashchange=function(){ga("send",{"hitType":"pageview","page":location.pathname+location.search+location.hash})}};if(Drupal.settings.googleanalytics.trackColorbox){e(document).bind("cbox_complete",function(){var t=e.colorbox.element().attr("href");if(t){ga("send",{"hitType":"pageview","page":Drupal.googleanalytics.getPageUrl(t)})}})}});Drupal.googleanalytics.isCrossDomain=function(t,a){if(!a){return!1}
+else{return e.inArray(t,a)>-1?!0:!1}};Drupal.googleanalytics.isDownload=function(e){var t=new RegExp("\\.("+Drupal.settings.googleanalytics.trackDownloadExtensions+")([\?#].*)?$","i");return t.test(e)};Drupal.googleanalytics.isInternal=function(e){var t=new RegExp("^(https?):\/\/"+window.location.host,"i");return t.test(e)};Drupal.googleanalytics.isInternalSpecial=function(e){var t=new RegExp("(\/go\/.*)$","i");return t.test(e)};Drupal.googleanalytics.getPageUrl=function(e){var t=new RegExp("^(https?):\/\/"+window.location.host,"i");return e.replace(t,"")};Drupal.googleanalytics.getDownloadExtension=function(e){var a=new RegExp("\\.("+Drupal.settings.googleanalytics.trackDownloadExtensions+")([\?#].*)?$","i"),t=a.exec(e);return(t===null)?"":t[1]}})(jQuery);;
+/* Source and licensing information for the above line(s) can be found at https://projektballast.dk/sites/all/modules/google_analytics/googleanalytics.js. */
+;/*})'"*/

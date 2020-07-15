@@ -7,3 +7,4 @@ sites/*/private
 
 sites/all/themes/pluto
 .htaccess
+/.idea
