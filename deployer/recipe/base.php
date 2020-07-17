@@ -42,31 +42,31 @@ task('debug', function() {
 task('deploy', [
   'slack:check',
   'deploy:info',
-//  'slack:notify:start',
+  'slack:notify:start',
   'deploy:prepare',
   'deploy:lock',
   'deploy:release',
   'deploy:update_code',
   'deploy:shared',
   'deploy:writable',
-//  'deploy:maintenance_mode:enable',
-//  'deploy:db:dump',
+  'deploy:maintenance_mode:enable',
+  'deploy:db:dump',
   'deploy:symlink',
-//  'deploy:drupal:post_deploy_updates',
-//  'deploy:maintenance_mode:disable',
+  'deploy:drupal:post_deploy_updates',
+  'deploy:maintenance_mode:disable',
   'deploy:unlock',
   'deploy:db:cleanup',
   'cleanup',
-//  'slack:notify:success',
+  'slack:notify:success',
   'success'
 ]);
 
 // Perform rollback tasks on failed deploys
 task('deploy:failed', [
-//  'deploy:db:rollback',
+  'deploy:db:rollback',
   'rollback',
-//  'deploy:maintenance_mode:disable',
+  'deploy:maintenance_mode:disable',
   'deploy:unlock',
-//  'slack:notify:failed'
+  'slack:notify:failed'
 ]);
 
